@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Traveller</title>
+	<link href="img/traveller.png" rel="shortcut icon" type="img/sicon.png">
+	
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('a[href^="#"]').on('click',function(e){
+			e.preventDefault();
+			var target = this.hash;
+			var $target = $(target);
+			$('html,body').animate({
+				'scrollTop':$target.offset().top
+			},1500,'swing');
+		
+		});
+	});
+	</script>
+	
+	<style>
+	*
+	{
+	margin:0px;
+	padding:0px;
+	}
+	.bg
+	{
+	background-image:url("img/header1.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	height:800px;
+	}
+	.bg4
+	{
+	background-image:url("img/bgfooter.png");
+	background-size:cover;
+	background-repeat:no-repeat;
+	height:400px;
+	}
+	.bg1
+	{
+	background-color:#fec7cd;
+	padding-bottom:70px;
+	padding-top:70px;
+	}
+	.bg2
+	{
+	background-color:#fec7cd;
+	box-shadow: 5px 5px 40px rgba(0, 0, 0, .1);
+	height:250px;
+	width:300px;
+	}
+	.no-mg
+	{
+	margin:0px;
+	}
+	.no-pd
+	{
+	padding:0px;
+	}
+	.nav>li>a 
+	{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+	color:#fff;
+	font-family: 'Roboto', sans-serif;
+	
+	letter-spacing:1px;
+	}
+	.nav>li>a:hover, .nav>li>a:focus
+	{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+	color:#fff;
+	background-color:transparent;
+	font-family: 'Roboto', sans-serif;
+	
+	letter-spacing:1px;
+	}
+	.mg-10-top
+	{
+	margin-top:10px;
+	}
+	.mg-20-top
+	{
+	margin-top:20px;
+	}
+	.mg-30-top
+	{
+	margin-top:30px;
+	}
+	.mg-180_top
+	{
+	margin-top:180px;
+	}
+	.mg-120_top
+	{
+	margin-top:120px;
+	}
+	.mg-80_top
+	{
+	margin-top:80px;
+	}
+	.mg-50_top
+	{
+	margin-top:50px;
+	}
+	.txt_60
+	{
+	font-size:40px;
+	font-family: 'Open Sans', sans-serif;
+	text-align:center;
+	color:#fff;
+	font-weight:bold;
+	letter-spacing:2px;
+	}
+	.txt_30
+	{
+	font-size:30px;
+	font-family: 'Open Sans', sans-serif;
+	text-align:center;
+	color:#f3ecec;
+	letter-spacing:2px;
+	}
+	.txt_22
+	{
+	font-size:22px;
+	font-family: 'Open Sans', sans-serif;
+	color:#25365d;
+	font-weight:bold;
+	}
+	.txt_16
+	{
+	font-size:16px;
+	font-family: 'Open Sans', sans-serif;
+	color:#5a5a5a;
+	line-height:22px;
+	text-align:justify;
+	}
+	.txt_18
+	{
+	font-size:18px;
+	font-family: 'Open Sans', sans-serif;
+	color:#25365d;
+	line-height:22px;
+	font-weight:bold;
+	}
+	.txt_40-pink
+	{
+	font-size:40px;
+	font-family: 'Open Sans', sans-serif;
+	color:#e95b6c;
+	letter-spacing:1px;
+	}
+	.inp-btn
+	{
+	background-color:#e95b6c;
+	height:35px;
+	width:140px;
+	color:#fff;
+	font-family: 'Open Sans', sans-serif;
+	text-align:center;
+	border:1px solid #e95b6c;
+	border-radius:20px;
+	font-weight:bold;
+	letter-spacing:1px;
+	font-family: 'Open Sans', sans-serif;
+	}
+	.inp-btn:hover, .inp-btn:focus
+	{
+	background-color:#ef4e61;
+	height:35px;
+	width:140px;
+	color:#fff;
+	font-family: 'Open Sans', sans-serif;
+	text-align:center;
+	border:1px solid #ef4e61;
+	border-radius:20px;
+	font-weight:bold;
+	outline:none;
+	letter-spacing:1px;
+	font-family: 'Open Sans', sans-serif;
+	}
+	.inp-btn1
+	{
+	background-color:#e95b6c;
+	height:40px;
+	width:200px;
+	color:#fff;
+	font-family: 'Open Sans', sans-serif;
+	text-align:center;
+	border:1px solid #e95b6c;
+	border-radius:20px;
+	font-weight:bold;
+	letter-spacing:1px;
+	font-family: 'Open Sans', sans-serif;
+	}
+	.inp-btn1:hover, .inp-btn1:focus
+	{
+	background-color:#ef4e61;
+	height:40px;
+	width:200px;
+	color:#fff;
+	font-family: 'Open Sans', sans-serif;
+	text-align:center;
+	border:1px solid #ef4e61;
+	border-radius:20px;
+	font-weight:bold;
+	outline:none;
+	letter-spacing:1px;
+	font-family: 'Open Sans', sans-serif;
+	}
+	a:hover, a:focus
+	{
+	text-decoration:none;
+	}
+	.icon
+	{
+	font-size:16px;
+	color:#e95b6c;
+	}
+	.border
+	{
+	border:2px dashed #25365d;
+	}
+	.inp-frm
+	{
+	width:700px;
+	height:35px;
+	border:1px solid #fff;
+	background:#fff;
+	padding-left:15px;
+	border-radius:3px;
+	}
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #25365d;
+	font-family: 'Open Sans', sans-serif;
+    font-size:16px;
+	letter-spacing:1px;
+	}
+	
+	.li
+	{
+	list-style-type:none;
+	display:inline;
+	font-family: 'Open Sans', sans-serif;
+    font-size:16px;
+	letter-spacing:1px;
+	color:#000;
+	padding-left:20px;
+	}
+	.a
+	{
+	color:#000;
+	}
+	.a:hover, .a:focus
+	{
+	color:#000;
+	}
+	.social
+	{
+	font-size:35px;
+	color:#000;
+	}
+	.social:hover, .social:focus
+	{
+	font-size:35px;
+	color:#000;
+	transition: all 0.2s ease;
+    transform: rotate(20deg);
+	}
+	.bdr
+	{
+	width:260px;
+	border:2px solid #fec7cd;
+	height:270px;
+	}
+	.bdr:hover, .bdr:focus
+	{
+	width:260px;
+	border:2px solid #fec7cd;
+	height:270px;
+	background-color:#fec7cd;
+	}
+	</style>
+  </head>
+  <body>
+    <div class="container-fluid bg">
+		<div class="container">
+			<nav class="navbar">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				  </button>
+				  <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+				</div>
+				<div class="collapse navbar-collapse navbar-right mg-10-top" id="myNavbar">
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">HOME</a></li>
+					
+					<li><a href="about us.html">ABOUT US</a></li>
+					<li><a href="flights.html">FLIGHTS</a></li>
+					<li><a href="plans.html">PLANS</a></li>
+					<li><a href="#">CONTACT</a></li>
+				  </ul>
+				  
+				</div>
+			  </div>
+			</nav>
+			<h3 class="txt_60 mg-180_top">BOOK YOUR FLIGHT</h3>
+			<h4 class="txt_30">EAT-SLEEP-<b>TRAVEL</b>-REPEAT</h4>
+			<a href="#book" class="inp-btn center-block" style="padding-top:6px;">BOOK NOW</a>
+		</div>
+	</div>
+	<div class="container mg-120_top" id="book">
+		<div class="row">
+			<div class="col-md-7">
+				<h2 class="txt_40-pink" style="color:#e95b6c;">FIND THE RIGHT FLIGHT & HOTELS</h2>
+				<p class="txt_16" style="margin-bottom:20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<i class="fas fa-chevron-circle-right icon pull-left" style="margin-top:3px; margin-right:10px;"></i>
+				<p class="txt_16" style="color:#7790b3;">Duis aute irure dolor in reprehenderit in voluptate. </p>
+				<i class="fas fa-chevron-circle-right icon pull-left" style="margin-top:3px; margin-right:10px;"></i>
+				<p class="txt_16" style="color:#7790b3;">Excepteur sint occaecat cupidatat non proident. </p>
+				<i class="fas fa-chevron-circle-right icon pull-left" style="margin-top:3px; margin-right:10px;"></i>
+				<p class="txt_16" style="color:#7790b3;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.  </p>
+				<a href="#"><input type="button" value="BOOK NOW" class="inp-btn mg-20-top"></a>
+			</div>
+			<div class="col-md-5">
+				<img src="img/flight.png" class="pull-right img-responsive mg-20-top">
+			</div>
+		</div>
+    </div>
+	<div class="container-fluid bg1 mg-120_top">
+		<div class="container">
+			<div class="row">
+				
+				<div style="width:20%; float:left;">
+					<a href="#">
+						<img src="img/safari.png" class="center-block">
+					</a>
+					<h5 class="txt_16" style="color:#25365d; letter-spacing:1px; font-weight:bold; text-align:center">SAFARI</h5>
+				</div>
+				<div style="width:20%; float:left;">
+					<a href="#">
+						<img src="img/adventure.png" class="center-block">
+					</a>
+					<h5 class="txt_16" style="color:#25365d; letter-spacing:1px; font-weight:bold; text-align:center">ADVENTURE</h5>
+				</div>
+				<div style="width:20%; float:left;">
+					<a href="#">
+						<img src="img/honeymoon.png" class="center-block">
+					</a>
+					<h5 class="txt_16" style="color:#25365d; letter-spacing:1px; font-weight:bold; text-align:center">HONEYMOON</h5>
+				</div>
+				<div style="width:20%; float:left;">
+					<a href="#">
+						<img src="img/beach.png" class="center-block">
+					</a>
+					<h5 class="txt_16" style="color:#25365d; letter-spacing:1px; font-weight:bold; text-align:center">BEACH</h5>
+				</div>
+				<div style="width:20%; float:left;">
+					<a href="#">
+						<img src="img/cruise.png" class="center-block">
+					</a>
+					<h5 class="txt_16" style="color:#25365d; letter-spacing:1px; font-weight:bold; text-align:center">CRUISE</h5>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid mg-120_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="bdr">
+					<img src="img/d1.png" class="center-block mg-30-top">
+					<h3 class="txt_18 text-center">FAST BOOKING</h3>
+					<p class="txt_16" style="margin-left:20px; margin-right:20px;">
+						We offer fast booking, 
+						fantastic products and 
+						competitive pricing makes the 
+						booking experience amazing
+					</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="bdr">
+					<img src="img/d2.png" class="center-block mg-30-top">
+					<h3 class="txt_18 text-center">LOWEST PRICE</h3>
+					<p class="txt_16" style="margin-left:20px; margin-right:20px;">
+						We ensure low rates on hotel 
+						reservation, holiday packages 
+						and on flight tickets
+					</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="bdr">
+					<img src="img/d3.png" class="center-block mg-30-top">
+					<h3 class="txt_18 text-center">EXCITING DEALS</h3>
+					<p class="txt_16" style="margin-left:20px; margin-right:20px;">
+						Enjoy exciting deals on 
+						flights, hotels, buses, car 
+						rental and tour packages	
+					</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="bdr">
+					<img src="img/d4.png" class="center-block mg-30-top">
+					<h3 class="txt_18 text-center">24/7 SUPPORT</h3>
+					<p class="txt_16" style="margin-left:20px; margin-right:20px;">
+						Get assitance 24/7 on any 
+						kind of travel related query. 
+						We are happy to assit you.
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid mg-180_top bg4">
+		<div class="container mg-180_top">
+		<ul class="text-center">
+			<li class="li"><a href="#" class="a">HOME</a></li>
+			<li class="li"><a href="#" class="a">ABOUT US</a></li>
+			<li class="li"><a href="#" class="a">FLIGHTS</a></li>
+			<li class="li"><a href="#" class="a">PLANS</a></li>
+			<li class="li"><a href="#" class="a">CONTACT</a></li>
+		</ul>
+		<ul class="text-center mg-30-top">
+		<a href="#"><i class="fab fa-facebook-square social" style="margin-right:10px;"></i></a>
+		<a href="#"><i class="fab fa-pinterest-square social" style="margin-right:10px;"></i></a>
+		<a href="#"><i class="fab fa-google-plus-square social" style="margin-right:10px;"></i></a>
+		<a href="#"><i class="fab fa-twitter-square social" style="marginR-right:10px;"></i></a>
+		<ul>
+		</div>
+	</div>
+  </body>
+</html>
